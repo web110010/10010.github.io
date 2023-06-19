@@ -104,8 +104,8 @@ I wish this blog does turn itself into something and take a form of it own."/>
   "keywords": [
     "Misc"
   ],
-  "articleBody": "This is my first post now and I do think this is going to be a journey.\nOnly time will tell where this voyage will take me. I hope as I do look at this post years later I will remember this post fondly. I hope to records some great records and maybe put out my thoughts and ideas about various things.\nI wish this blog does turn itself into something and take a form of it own.\nSo lets start this journey!\nPhoto by Patrick Tomasso on Unsplash\n",
-  "wordCount" : "89",
+  "articleBody": "This is my first post now and I do think this is going to be a journey.\nOnly time will tell where this voyage will take me. I hope as I do look at this post years later I will remember this post fondly. I hope to records some great records and maybe put out my thoughts and ideas about various things.\nI wish this blog does turn itself into something and take a form of it own.\nSo lets start this journey!\nPatrick Tomasso on Unsplash ",
+  "wordCount" : "87",
   "inLanguage": "en",
   "datePublished": "2023-06-19T09:44:32+05:30",
   "dateModified": "2023-06-19T09:44:32+05:30",
@@ -171,13 +171,13 @@ I wish this blog does turn itself into something and take a form of it own."/>
                 </a>
             </li>
             <li>
-                <a href="https://www.110010.win/index.xml/" title="">
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></span>
+                <a href="https://www.110010.win/archive/" title="Archive">
+                    <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.110010.win/archive/" title="Archive">
-                    <span>Archive</span>
+                <a href="https://www.110010.win/about/" title="About">
+                    <span>About</span>
                 </a>
             </li>
             <li>
@@ -188,6 +188,11 @@ I wish this blog does turn itself into something and take a form of it own."/>
             <li>
                 <a href="https://www.110010.win/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.110010.win/index.xml/" title="">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></span>
                 </a>
             </li>
         </ul>
@@ -211,7 +216,15 @@ I wish this blog does turn itself into something and take a form of it own."/>
 <p>So lets start this journey!</p>
 <p><img loading="lazy" src="https://source.unsplash.com/5hvn-2WW6rY" alt="journey"  />
 
-<em>Photo by <a href="https://unsplash.com/@impatrickt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Patrick Tomasso</a> on <a href="https://unsplash.com/photos/5hvn-2WW6rY?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></em></p>
+
+<div style="text-align: center;">
+	<i>
+      <a href="https://unsplash.com/@impatrickt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Patrick Tomasso</a>
+      on
+      <a href="https://unsplash.com/photos/5hvn-2WW6rY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+      Unsplash</a></i>
+	
+</div></p>
 
 
   </div>
@@ -355,6 +368,53 @@ I wish this blog does turn itself into something and take a form of it own."/>
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
