@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on 110010 - Thoughts and Ideas</title>
-    <link>https://www.110010.win/posts/</link>
-    <description>Recent content in Posts on 110010 - Thoughts and Ideas</description>
+    <title>Linux on 110010 - Thoughts and Ideas</title>
+    <link>https://www.110010.win/tags/linux/</link>
+    <description>Recent content in Linux on 110010 - Thoughts and Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Jun 2023 21:16:02 +0530</lastBuildDate><atom:link href="https://www.110010.win/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jun 2023 21:16:02 +0530</lastBuildDate><atom:link href="https://www.110010.win/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Joys of a Tiling Window Manager</title>
       <link>https://www.110010.win/posts/joys-of-tiling-window-manager/</link>
@@ -66,33 +66,6 @@
 </li>
 </ol>
 <p>So, what are you waiting for? Go wild, try out a tiling window manager, discover a whole new way of doing something and the most important thing of all, enjoy your time doing it.</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>First Post</title>
-      <link>https://www.110010.win/posts/firstpost/</link>
-      <pubDate>Mon, 19 Jun 2023 09:44:32 +0530</pubDate>
-      
-      <guid>https://www.110010.win/posts/firstpost/</guid>
-      <description>This is my first post now and I do think this is going to be a journey.
-Only time will tell where this voyage will take me. I hope as I do look at this post years later I will remember this post fondly. I hope to records some great records and maybe put out my thoughts and ideas about various things.
-I wish this blog does turn itself into something and take a form of it own.</description>
-      <content:encoded><![CDATA[<p>This is my first post now and I do think this is going to be a journey.</p>
-<p>Only time will tell where this voyage will take me. I hope as I do look at this post years later I will remember this post fondly. I hope to records some great records and maybe put out my thoughts and ideas about various things.</p>
-<p>I wish this blog does turn itself into something and take a form of it own.</p>
-<p>So lets start this journey!</p>
-<p><img loading="lazy" src="https://source.unsplash.com/5hvn-2WW6rY" alt="journey"  />
-
-
-<div style="text-align: center;">
-	<i>
-      <a href="https://unsplash.com/@impatrickt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Patrick Tomasso</a>
-      on
-      <a href="https://unsplash.com/photos/5hvn-2WW6rY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-      Unsplash</a></i>
-	
-</div></p>
 ]]></content:encoded>
     </item>
     
