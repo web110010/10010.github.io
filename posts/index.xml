@@ -6,7 +6,155 @@
     <description>Recent content in Posts on 110010 - Thoughts and Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Jun 2023 21:16:02 +0530</lastBuildDate><atom:link href="https://www.110010.win/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Jun 2023 18:30:43 +0930</lastBuildDate><atom:link href="https://www.110010.win/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A FizzBuzz Implentation</title>
+      <link>https://www.110010.win/posts/a-fizzbuzz-implentation/</link>
+      <pubDate>Wed, 28 Jun 2023 18:30:43 +0930</pubDate>
+      
+      <guid>https://www.110010.win/posts/a-fizzbuzz-implentation/</guid>
+      <description>I have been thinking of learning golang for sometime now and decided that well an exercise such as fizzbuzz would be a great way to start familiarizing myself with the language.
+What is FizzBuzz? Fizz buzz is a group word game for children to teach them about division. Players take turns to count incrementally, replacing any number divisible by three with the word fizz, and any number divisible by five with the word buzz.</description>
+      <content:encoded><![CDATA[<p>I have been thinking of learning golang for sometime now and decided that well an exercise such as fizzbuzz would be a great way to start familiarizing myself with the language.</p>
+<p><img loading="lazy" src="https://i.imgur.com/EjBUA2d.png#center" alt="golang"  />
+</p>
+<h2 id="what-is-fizzbuzz">What is FizzBuzz?</h2>
+<blockquote>
+<p>Fizz buzz is a group word game for children to teach them about
+division. Players take turns to count incrementally, replacing any
+number divisible by three with the word <em>fizz</em>, and any number divisible by five with the word <em>buzz</em>. — <a href="https://en.wikipedia.org/wiki/Fizz_buzz"><em>Wikipedia</em></a></p>
+</blockquote>
+<p>For Example, in a range 1-15, it will go like:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Shell" data-lang="Shell"><span class="line"><span class="cl"><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="m">2</span>
+</span></span><span class="line"><span class="cl">Fizz
+</span></span><span class="line"><span class="cl"><span class="m">4</span>
+</span></span><span class="line"><span class="cl">Buzz
+</span></span><span class="line"><span class="cl">Fizz
+</span></span><span class="line"><span class="cl"><span class="m">7</span>
+</span></span><span class="line"><span class="cl"><span class="m">8</span>
+</span></span><span class="line"><span class="cl">Fizz
+</span></span><span class="line"><span class="cl">Buzz
+</span></span><span class="line"><span class="cl"><span class="m">11</span>
+</span></span><span class="line"><span class="cl">Fizz
+</span></span><span class="line"><span class="cl"><span class="m">13</span>
+</span></span><span class="line"><span class="cl"><span class="m">14</span>
+</span></span><span class="line"><span class="cl">FizzBuzz</span></span></code></pre></div>
+<p>Conventionally the range being 1-100.</p>
+<h2 id="the-problem">The Problem</h2>
+<p><em>Write a program that prints the numbers from 1 to 100. But for multiples
+of three print “Fizz” instead of the number and for the multiples of
+five print “Buzz”. For numbers which are multiples of both three and
+five print “FizzBuzz”.</em></p>
+<h2 id="my-solution">My Solution</h2>
+<p>It is easy to build a simple fizzbuzz solution, doing a loop to 100 and hard coding divisibility checks like <code>if i%3 == 0</code>, but I want to generalize my code as much as possible. That is, make changing the inputs very easy without affecting the logic of the program.</p>
+<p>Here is my solution:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Struct to map Number to String
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">type</span> <span class="nx">NumString</span> <span class="kd">struct</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">num</span> <span class="kt">int</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">txt</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// Range
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kd">var</span> <span class="nx">rf</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">1</span>    <span class="c1">// Range First
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kd">var</span> <span class="nx">rl</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">100</span>  <span class="c1">// Range Last
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// FizzBuzz Relations
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">numfb</span> <span class="o">:=</span> <span class="p">[]</span><span class="nx">NumString</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="s">&#34;Fizz&#34;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="s">&#34;Buzz&#34;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">fizz_buzz</span><span class="p">(</span><span class="nx">numfb</span><span class="p">,</span> <span class="nx">rf</span><span class="p">,</span> <span class="nx">rl</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">fizz_buzz</span><span class="p">(</span><span class="nx">numfb</span> <span class="p">[]</span><span class="nx">NumString</span><span class="p">,</span> <span class="nx">rf</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">rl</span> <span class="kt">int</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">tempstr</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&#34;&#34;</span> 
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="nx">i</span><span class="o">:=</span> <span class="nx">rf</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">rl</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">element</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">numfb</span><span class="p">{</span> <span class="c1">// Go over all Relations and check divisibility
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span> <span class="nx">i</span><span class="o">%</span><span class="nx">element</span><span class="p">.</span><span class="nx">num</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nx">tempstr</span> <span class="o">+=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">txt</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">tempstr</span> <span class="o">==</span> <span class="s">&#34;&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="c1">// Print number if no divisibility
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// Otherwise Print mapped txt
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">tempstr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">tempstr</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="observations">Observations</h3>
+<ol>
+<li>
+<p>Using a struct instead of a map. I should have probably used a map instead, but really wanted to do this with a struct. I will say, it turned out better than I could have hoped for. The more I look at it, the more I think It should have used a map, but I will resist, this is my masterpiece.</p>
+</li>
+<li>
+<p>On line <em>27</em>, the for loop uses <code>_</code> because and index value is not needed. Interesting design choice.</p>
+</li>
+<li>
+<p><code>else</code> start the same line as I close the bracket for the if statement. I cannot place the else statement on the next line, that is a syntax error. If I think about it, it does make sense that the related else statement should be nested, but it does feel weird doing that, since i have a habit of placing the else statement on the next line. The 2 minutes I did not understand why this was happening, I felt very dumb.</p>
+</li>
+<li>
+<p>There is no <em>output</em>. Wonder what happened to it, you are now gonna have to run it on your own to find out, if the <em>output</em> is correct or not.</p>
+</li>
+</ol>
+<h2 id="closing-words">Closing words</h2>
+<p>It was pretty fun writing this thing in golang. The documentation was full of great examples which made understanding the basics really easy. Probably one of the easiest languages to learn, if you know any other programming language.</p>
+<p>I would say it is an above average implementation of fizzbuzz. It may not be the fastest, or the most generalized one, but this much is sure, if you look at it, it surely is an okay fizzbuzz implementation.</p>
+<p>I do think there is still improvement that can be to this. I may comeback to this on a later date once I am more comfortable in the language.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Joys of a Tiling Window Manager</title>
       <link>https://www.110010.win/posts/joys-of-tiling-window-manager/</link>
@@ -82,7 +230,7 @@ I wish this blog does turn itself into something and take a form of it own.</des
 <p>Only time will tell where this voyage will take me. I hope as I do look at this post years later I will remember this post fondly. I hope to records some great records and maybe put out my thoughts and ideas about various things.</p>
 <p>I wish this blog does turn itself into something and take a form of it own.</p>
 <p>So lets start this journey!</p>
-<p><img loading="lazy" src="https://source.unsplash.com/5hvn-2WW6rY" alt="journey"  />
+<p><img loading="lazy" src="https://images.unsplash.com/photo-1476820865390-c52aeebb9891?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80" alt="journey"  />
 
 
 <div style="text-align: center;">

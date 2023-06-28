@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.110010.win/</loc>
+    <lastmod>2023-06-28T18:30:43+09:30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.110010.win/posts/a-fizzbuzz-implentation/</loc>
+    <lastmod>2023-06-28T18:30:43+09:30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.110010.win/categories/</loc>
+    <lastmod>2023-06-28T18:30:43+09:30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.110010.win/tags/golang/</loc>
+    <lastmod>2023-06-28T18:30:43+09:30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.110010.win/posts/</loc>
+    <lastmod>2023-06-28T18:30:43+09:30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.110010.win/categories/programming/</loc>
+    <lastmod>2023-06-28T18:30:43+09:30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.110010.win/tags/</loc>
+    <lastmod>2023-06-28T18:30:43+09:30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.110010.win/tags/i3/</loc>
     <lastmod>2023-06-23T21:16:02+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -12,17 +47,22 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://www.110010.win/tags/linux/</loc>
+    <loc>https://www.110010.win/categories/linux/</loc>
     <lastmod>2023-06-23T21:16:02+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://www.110010.win/posts/</loc>
+    <loc>https://www.110010.win/tags/sway/</loc>
     <lastmod>2023-06-23T21:16:02+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://www.110010.win/tags/</loc>
+    <loc>https://www.110010.win/tags/tiling-window-manager/</loc>
+    <lastmod>2023-06-23T21:16:02+05:30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.110010.win/tags/window-management/</loc>
     <lastmod>2023-06-23T21:16:02+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -32,7 +72,7 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://www.110010.win/tags/misc/</loc>
+    <loc>https://www.110010.win/categories/misc/</loc>
     <lastmod>2023-06-19T09:44:32+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -42,10 +82,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://www.110010.win/archive/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://www.110010.win/categories/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>

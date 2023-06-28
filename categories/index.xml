@@ -5,6 +5,37 @@
     <link>https://www.110010.win/categories/</link>
     <description>Recent content in Categories on 110010 - Thoughts and Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://www.110010.win/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Jun 2023 18:30:43 +0930</lastBuildDate><atom:link href="https://www.110010.win/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>https://www.110010.win/categories/programming/</link>
+      <pubDate>Wed, 28 Jun 2023 18:30:43 +0930</pubDate>
+      
+      <guid>https://www.110010.win/categories/programming/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://www.110010.win/categories/linux/</link>
+      <pubDate>Fri, 23 Jun 2023 21:16:02 +0530</pubDate>
+      
+      <guid>https://www.110010.win/categories/linux/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Misc</title>
+      <link>https://www.110010.win/categories/misc/</link>
+      <pubDate>Mon, 19 Jun 2023 09:44:32 +0530</pubDate>
+      
+      <guid>https://www.110010.win/categories/misc/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
   </channel>
 </rss>
