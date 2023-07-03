@@ -6,11 +6,11 @@
     <description>Recent content in Posts on 110010 - Thoughts and Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jul 2023 16:33:11 +0810</lastBuildDate><atom:link href="https://www.110010.win/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jul 2023 16:33:11 +0832</lastBuildDate><atom:link href="https://www.110010.win/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gotosocial With Cloudflare Tunnels and Docker</title>
       <link>https://www.110010.win/posts/gotosocial-with-cloudflare-tunnels-and-docker/</link>
-      <pubDate>Mon, 03 Jul 2023 16:33:11 +0810</pubDate>
+      <pubDate>Mon, 03 Jul 2023 16:33:11 +0832</pubDate>
       
       <guid>https://www.110010.win/posts/gotosocial-with-cloudflare-tunnels-and-docker/</guid>
       <description>What is GoToSocial GoToSocial provides a lightweight, customizable, and safety-focused entryway into the Fediverse, and is comparable to (but distinct from) existing projects such as Mastodon, Pleroma, Friendica, and PixelFed. -GitHub - gotosocial
@@ -266,46 +266,31 @@ The service has both free and premium tiers. The software that hosts the contain
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div></li>
+</div><ol start="4">
+<li>Now simply <code>docker-compose up -d</code> or <code>docker compose up -d</code>, depending on whatever you have installed.</li>
 </ol>
+</li>
+</ol>
+<h2 id="voila">Voila!!</h2>
+<p>If you did everything correctly your GoToSocial instance should be up and running. Access it at <code>gts.whatever-your-domain-is</code>. Now go <strong>wild.</strong></p>
+<h2 id="bonus-round-creating-users">Bonus Round: Creating users</h2>
+<p>To create a user:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3. Now simply `docker-compose up -d` or `docker compose up -d`, depending on whatever you have installed.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">## Voila!!
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">If you did everything correctly your GoToSocial instance should be up and running. Access it at `gts.whatever-your-domain-is`. Now go **wild.**
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">## Bonus Round: Creating users
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">To create a user:
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">```bash
-</span></span><span class="line"><span class="cl">docker exec -it CONTAINER_NAME_OR_ID \
-</span></span><span class="line"><span class="cl"> /gotosocial/gotosocial \
-</span></span><span class="line"><span class="cl"> admin account create \
-</span></span><span class="line"><span class="cl"> --username some_username \
-</span></span><span class="line"><span class="cl"> --email someone@example.org \
-</span></span><span class="line"><span class="cl"> --password &#39;some_very_good_password&#39;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker <span class="nb">exec</span> -it CONTAINER_NAME_OR_ID <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> /gotosocial/gotosocial <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> admin account create <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> --username some_username <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> --email someone@example.org <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> --password <span class="s1">&#39;some_very_good_password&#39;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>And then to promote the created user to admin:</p>
