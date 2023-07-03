@@ -85,6 +85,7 @@ The service has both free and premium tiers. The software that hosts the contain
 </li>
 </ol>
 <p><em>I applied to their <strong>pay as you go</strong> plan so that they don&rsquo;t just delete my free instance, for <strong>&ldquo;verification&rdquo;</strong> they deducted 100 USD from my account, that scared the ever living shit out of me, until I got the message 1 minute later from my bank, that it was reversed. At least give a warning saying you will be checking for 100 USD, by deducting and refunding it.</em></p>
+<p>I have since terminated my <em>Oracle Cloud Account</em>.</p>
 </blockquote>
 </blockquote>
 <hr>
@@ -153,7 +154,7 @@ The service has both free and premium tiers. The software that hosts the contain
 <p>Type: HTTP</p>
 </li>
 <li>
-<p>URL: <code>gts.docker:8080</code> (replace <code>gts.docker</code> with whatever hostname you want and <code>8080</code> with your desired port)</p>
+<p>URL: <code>gts.docker:8080</code> (replace <code>gts.docker</code> with whatever hostname you want and <code>8080</code>is necessary.)</p>
 </li>
 </ul>
 </li>
@@ -230,8 +231,6 @@ The service has both free and premium tiers. The software that hosts the contain
 </span><span class="lnt">26
 </span><span class="lnt">27
 </span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3.3&#34;</span><span class="w">
@@ -252,8 +251,6 @@ The service has both free and premium tiers. The software that hosts the contain
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">GTS_DB_ADDRESS</span><span class="p">:</span><span class="w"> </span><span class="l">/gotosocial/storage/sqlite.db</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">GTS_LETSENCRYPT_ENABLED</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;false&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">GTS_LETSENCRYPT_EMAIL_ADDRESS</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;8080:8080&#34;</span><span class="w"> </span><span class="c"># Should be same as port of URL you added in step 5</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/path/to/data:/gotosocial/storage</span><span class="w"> </span><span class="c">#Change path</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;always&#34;</span><span class="w">
