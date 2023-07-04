@@ -190,7 +190,7 @@ The service has both free and premium tiers. The software that hosts the contain
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">gotosocial</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ipam</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">default</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="4">
