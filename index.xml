@@ -53,7 +53,6 @@ It is simpler to run and very easy to setup.</description>
 <li>
 <p>3rd party apps still have bugs, with <em>GoToSocial</em> and sometimes bug out.</p>
 <blockquote>
-<p><a href="%5Bhttps://tusky.app/%5D(https://tusky.app/)">Tusky</a> doesn&rsquo;t show my profile picture.</p>
 <p><a href="https://febilab.app">Fedilab</a> just keeps on crashing for me.</p>
 </blockquote>
 </li>
@@ -388,7 +387,7 @@ The service has both free and premium tiers. The software that hosts the contain
     </item>
     
     <item>
-      <title>A FizzBuzz Implentation</title>
+      <title>A FizzBuzz Implementation</title>
       <link>https://www.110010.win/posts/a-fizzbuzz-implentation/</link>
       <pubDate>Wed, 28 Jun 2023 18:30:43 +0930</pubDate>
       
